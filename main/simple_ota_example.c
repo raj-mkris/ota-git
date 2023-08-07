@@ -26,7 +26,7 @@
 #endif
 
 #define HASH_LEN 32
-#define Version 1.0.0
+#define Version 1
 #ifdef CONFIG_EXAMPLE_FIRMWARE_UPGRADE_BIND_IF
 /* The interface name value can refer to if_desc in esp_netif_defaults.h */
 #if CONFIG_EXAMPLE_FIRMWARE_UPGRADE_BIND_IF_ETH
@@ -124,7 +124,7 @@ void simple_ota_example_task(void *pvParameter)
     else
     {
         ESP_LOGE(TAG, "Firmware upgrade failed");
-        ESP_LOGE("TAG", Version);
+        printf(Version);
     }
     while (1)
     {
